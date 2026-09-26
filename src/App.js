@@ -1,14 +1,15 @@
 import './App.css';
+import NavBar from './components/NavBar.jsx';
+import Informacion from './components/informacion.jsx';
 
 function App() {
   return (
-    
     <div className="App">
-        <p>
-          Axial dental
-        </p>
-        
+        <NavBar/>
+        <Informacion/>
     </div>
+
+    
   );
 }
 
