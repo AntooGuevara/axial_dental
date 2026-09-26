@@ -1,20 +1,18 @@
 import React from 'react';
+import './styles/navbar.css';
 
-
-
-//diseño
-import './styles/navbar.css'
-
-//clase
 const NavBar = () => {
     return (
         <header className="header">
             <div className="logo-container">
-                Axial Dental
+                <span>Axial Dental</span>
             </div>
+
             <nav>
-                <ul class="nav-container">
-                    <li><a href="/">+52 618 --- ----</a></li>
+                <ul className="nav-container">
+                    <li>
+                        <a href="/">+52 618 --- ----</a>
+                    </li>
                 </ul>
             </nav>
         </header>
