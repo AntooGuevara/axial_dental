@@ -1,0 +1,30 @@
+.contenedores {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    gap: 30px;
+
+    position: relative;
+    margin-top: -70px;
+    z-index: 10;
+}
+
+.contenedor {
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #eceee3;
+    border-radius: 20px;
+}
+
+.titulo {
+    font-size: 20px;
+    color: #304342;
+    font-weight: bold;
+}
+
+.descripcion {
+    font-size: 10px;
+    color: #7C8785;
+}
