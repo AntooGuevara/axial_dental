@@ -1,11 +1,13 @@
 import React from 'react';
 import './styles/navbar.css';
+import logo from './images/logo_sin_fondo.png';
+
 
 const NavBar = () => {
     return (
         <header className="header">
             <div className="logo-container">
-                <span>Axial Dental</span>
+                <img src={logo} alt="logo" />
             </div>
 
             <nav>

@@ -6,11 +6,7 @@ const Fondo = () => {
     return (
         <section className="fondo">
 
-            <img
-                className="fondo-imagen"
-                src={consultorio}
-                alt="Consultorio dental"
-            />
+            <img className="fondo-imagen" src={consultorio} alt="Consultorio dental"/>
 
             <div className="fondo-overlay"></div>
 
@@ -18,7 +14,7 @@ const Fondo = () => {
                 <p>BIENVENIDO A</p>
 
                 <h1>
-                    Tu Sonrisa <em>Perfecta</em>
+                     Axial  <em> Dental </em>
                 </h1>
 
                 <span>

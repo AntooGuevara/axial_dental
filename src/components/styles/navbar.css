@@ -8,7 +8,7 @@
     align-items: center;
 
     width: 100%;
-    padding: 20px 40px;
+    padding: 3px ;
 
     background-color: transparent;
 
@@ -17,13 +17,10 @@
     box-sizing: border-box;
 }
 
-.logo-container {
+.logo-container img{
     display: flex;
-    align-items: center;
-
-    color: white;
-    font-size: 20px;
-    font-weight: 600;
+    height: 100px;
+    width: auto;
 }
 
 .nav-container {
