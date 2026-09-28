@@ -11,6 +11,7 @@ import Contenedores from './components/contenedores.jsx';
 function App() {
   return (
     <div className="App">
+      
         <Fondo/>
         <NavBar/>
         <Contenedores/>
