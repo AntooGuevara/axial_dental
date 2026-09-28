@@ -4,7 +4,8 @@ import './styles/contenedores.css';
 
 export const Contenedores = () => {
   return (
- 
+    <>
+    {/* contenedores de información */}
     <section className='contenedores'>
 
         <div className='contenedor'>
@@ -27,7 +28,52 @@ export const Contenedores = () => {
                 con tratamientos de presición
             </p>
         </div>
-    </section>    
+    </section>  
+    {/* contenedor del mapa y horarios */}
+
+    <section className='mapa'>
+
+        <div className='mapa-contenedor'>
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.771367830732!2d-104.65095699999999!3d24.0391263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bb7d0ecdbbe37%3A0xb0460762e498cb8!2sPedro%20%C3%81vila%20Nevarez%20605%2C%20Armando%20del%20Castillo%20Franco%2C%2034214%20Durango%2C%20Dgo.!5e0!3m2!1ses!2smx!4v1790580975271!5m2!1ses!2smx"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            title="Mapa de ubicación de Axial Dental"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            ></iframe>
+        </div>    
+
+        <div className='horarios'>
+
+            <div className='fila-horario'>
+                <p className='titulo'>Horario de atención</p>
+            </div>
+
+            <div className='fila-horario'>
+
+                <p className='info'>Lunes-Viernes</p>
+                <span className='horarios'>8:00 - 19:00</span>
+            </div>
+
+            <div className='fila-horario'>
+
+                <p className='info'>Sábado</p>
+                <span className='horarios'>9:00 - 15:00</span>
+            </div>
+
+            <div className='fila-horario'>
+
+                <p className='info'>Domingo</p>
+                <span className='horarios'>Cerrado</span>
+            </div>
+
+
+        </div>
+    </section>
+    </>
   );
 };
 
