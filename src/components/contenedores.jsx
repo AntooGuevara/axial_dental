@@ -7,7 +7,7 @@ import Modal from './modal.jsx';
 
 export const Contenedores = () => {
 
-    const [modalAbierto, setModalAbierto] = useState(false);   
+    const [modalAbierto, setModalAbierto] = useState(null);   
     console.log(modalAbierto) 
 
   return (
@@ -40,7 +40,7 @@ export const Contenedores = () => {
             <div className='botones'>
 
                 <button className='botones-agendar'  
-                onClick={() => setModalAbierto(true)}>
+                onClick={() => setModalAbierto('prevencion')}>
                     Ver paquetes y agendar
 
                 </button>
@@ -67,7 +67,7 @@ export const Contenedores = () => {
 
             <div className='botones'>
                 <button className='botones-agendar'
-                onClick={() => setModalAbierto(true)}
+                onClick={() => setModalAbierto('estetica')}
                 >Ver paquetes y agendar</button>
             </div>
 
@@ -94,7 +94,7 @@ export const Contenedores = () => {
 
             <div className='botones'>
                 <button className='botones-agendar'
-                onClick={() => setModalAbierto(true)}
+                onClick={() => setModalAbierto('restauracion')}
                 >Ver paquetes y agendar</button>
             </div>
 
@@ -145,7 +145,9 @@ export const Contenedores = () => {
         </div>
     </section>
     {modalAbierto && (
-        <Modal cerrar={() => setModalAbierto(false)} />
+        <Modal 
+            tipo={modalAbierto}
+            cerrar={() => setModalAbierto(null)} />
     )}
         </>
 
