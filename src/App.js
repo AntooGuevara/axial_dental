@@ -16,6 +16,7 @@ function App() {
         <NavBar/>
         <Contenedores/>
         <Informacion/>
+        
 
     </div>
        

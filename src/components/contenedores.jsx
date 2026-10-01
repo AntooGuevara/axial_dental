@@ -1,12 +1,22 @@
-import React from 'react'
+import React , {useState} from 'react'
 import './styles/contenedores.css';
+import Modal from './modal.jsx';
+
+
 
 
 export const Contenedores = () => {
+
+    const [modalAbierto, setModalAbierto] = useState(false);   
+    console.log(modalAbierto) 
+
   return (
+
     <>
+    
     {/* contenedores de información */}
     <section className='contenedores'>
+        
 
         <div className='contenedor'>
 
@@ -28,7 +38,12 @@ export const Contenedores = () => {
                 <span className='precios'> --$</span>
             </div>
             <div className='botones'>
-                <button className='botones-agendar'>Ver paquetes y agendar</button>
+
+                <button className='botones-agendar'  
+                onClick={() => setModalAbierto(true)}>
+                    Ver paquetes y agendar
+
+                </button>
             </div>
         </div>
  
@@ -51,7 +66,9 @@ export const Contenedores = () => {
             </div>
 
             <div className='botones'>
-                <button className='botones-agendar'>Ver paquetes y agendar</button>
+                <button className='botones-agendar'
+                onClick={() => setModalAbierto(true)}
+                >Ver paquetes y agendar</button>
             </div>
 
         </div>
@@ -76,7 +93,9 @@ export const Contenedores = () => {
             </div>
 
             <div className='botones'>
-                <button className='botones-agendar'>Ver paquetes y agendar</button>
+                <button className='botones-agendar'
+                onClick={() => setModalAbierto(true)}
+                >Ver paquetes y agendar</button>
             </div>
 
         </div>
@@ -125,8 +144,15 @@ export const Contenedores = () => {
 
         </div>
     </section>
-    </>
+    {modalAbierto && (
+        <Modal cerrar={() => setModalAbierto(false)} />
+    )}
+        </>
+
+    
+    
   );
+  
 };
 
 export default Contenedores;
