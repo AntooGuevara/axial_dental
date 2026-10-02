@@ -105,8 +105,15 @@ export const Contenedores = () => {
     <section className='mapa'>
 
         <div className='mapa-contenedor'>
+
+        {/* 
+        dirección del local sacada directamente de googlemaps
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.9428332814183!2d-104.65160073041874!3d24.039127523442275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bb7d0ecdbbe37%3A0xb0460762e498cb8!2sPedro%20%C3%81vila%20Nevarez%20605%2C%20Armando%20del%20Castillo%20Franco%2C%2034214%20Durango%2C%20Dgo.!5e0!3m2!1ses!2smx!4v1790912035799!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>*/}
+
+
             <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3643.771367830732!2d-104.65095699999999!3d24.0391263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bb7d0ecdbbe37$3A0xb0460762e498cb8!2sPedro$20$C3$81vila$20Nevarez$20605$2C$20Armando$20del$20Castillo$20Franco$2C$2034214$20Durango$2C$20Dgo.!5e0!3m2!1ses!2smx!4v1790580975271!5m2!1ses!2smx"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d910.9428332814183!2d-104.65160073041874!3d24.039127523442275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869bb7d0ecdbbe37%3A0xb0460762e498cb8!2sPedro%20%C3%81vila%20Nevarez%20605%2C%20Armando%20del%20Castillo%20Franco%2C%2034214%20Durango%2C%20Dgo.!5e0!3m2!1ses!2smx!4v1790912035799!5m2!1ses!2smx"
             width="600"
             height="450"
             style={{ border: 0 }}
