@@ -100,3 +100,35 @@
     padding-left: 20px;
     padding-right: 20px;
 }
+
+
+/*  responsividad  */
+
+
+@media (max-width: 768px) {
+
+    .contenedores {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .contenedor {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .mapa {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .mapa-contenedor,
+    .horarios {
+        width: 100%;
+    }
+
+    .mapa-contenedor iframe {
+        height: 350px;
+    }
+}

@@ -38,3 +38,20 @@
     color: white;
     font-size: 16px;
 }
+
+
+/*  responsividad  */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 20px;
+    }
+
+    .logo-container img {
+        height: 65px;
+    }
+
+    .nav-container li a {
+        font-size: 13px;
+    }
+}
