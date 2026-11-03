@@ -1,120 +1,40 @@
-import React , {useState} from 'react'
+import React, { useState } from 'react';
 import './styles/contenedores.css';
 import Modal from './modal.jsx';
-
-
-
+import { serviciosData } from './data/serviciosData.js'; //eso es como una db por el momento NO HAY NADA DE BACK AQUI
 
 export const Contenedores = () => {
-
-    const [modalAbierto, setModalAbierto] = useState(null);   
-    console.log(modalAbierto) 
+  const [modalAbierto, setModalAbierto] = useState(null);
 
   return (
-
     <>
-    
-    {/* contenedores de información */}
-    <section className='contenedores'>
-        
+      <section className='contenedores'>
+        {Object.entries(serviciosData).map(([clave, categoria]) => (
+          <div className='contenedor' key={clave}>
+            <p className='titulo'>{categoria.titulo}</p>
+            <p className='info'>{categoria.descripcion}</p>
 
-        <div className='contenedor'>
-
-            <p className='titulo'>Salud y prevención</p>
-            <p className='info'>Invertir en prevención es la decisión| <br/>
-                más inteligente para tu sonrisa a largo plazo
-            </p>
-
-            <div className='fila-servicio'>
-                <p className='servicios'>Limpieza dental</p>
-                <span className='precios'> $600</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Guarda oclusal</p>
-                <span className='precios'> $600</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Tratamiento periodontal</p>
-                <span className='precios'> $1500</span>
-            </div>
-            <div className='botones'>
-
-                <button className='botones-agendar'  
-                onClick={() => setModalAbierto('prevencion')}>
-                    Ver paquetes y agendar
-
-                </button>
-            </div>
-        </div>
- 
-        <div className='contenedor'>
-            <p className='titulo'>Estética y Sonrisa</p>
-            <p className='info'>Transformamos tu sonrisa con tratamientos que <br/>
-                realzan tu belleza natural y confianza
-            </p>
-            <div className='fila-servicio'>
-                <p className='servicios'>Resinas</p>
-                <span className='precios'> $1000</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Blanqueamiento</p>
-                <span className='precios'> $2500</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Carillas de resina</p>
-                <span className='precios'> $1000 - $2000</span>
-            </div>
+            {categoria.servicios.map((servicio) => (
+              <div className='fila-servicio' key={servicio.nombre}>
+                <p className='servicios'>{servicio.nombre}</p>
+                <span className='precios'>{servicio.precio}</span>
+              </div>
+            ))}
 
             <div className='botones'>
-                <button className='botones-agendar'
-                onClick={() => setModalAbierto('estetica')}
-                >Ver paquetes y agendar</button>
+              <button 
+                className='botones-agendar'
+                onClick={() => setModalAbierto(clave)}
+              >
+                Ver paquetes y agendar
+              </button>
             </div>
+          </div>
+        ))}
+      </section>
 
-        </div>
- 
-        <div className='contenedor'>
-            <p className='titulo'>Restauración y Especialidades</p>
-            <p className='info'>Devolvemos funcionalidad y armonía a tu mordida <br/>
-                con tratamientos de presición
-            </p>
-
-            <div className='fila-servicio'>
-                <p className='servicios'>Extracción</p>
-                <span className='precios'> $800 - $2500</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Endodoncia</p>
-                <span className='precios'> 3500$</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Protesis removible</p>
-                <span className='precios'> 3000$</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Protesis fija</p>
-                <span className='precios'> 4500$</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Brackets (ortodoncia)</p>
-                <span className='precios'> 5000$</span>
-            </div>
-            <div className='fila-servicio'>
-                <p className='servicios'>Implantes</p>
-                <span className='precios'> 25000$</span>
-            </div>
-
-            <div className='botones'>
-                <button className='botones-agendar'
-                onClick={() => setModalAbierto('restauracion')}
-                >Ver paquetes y agendar</button>
-            </div>
-
-        </div>
-    </section>  
-    {/* contenedor del mapa y horarios */}
-
-    <section className='mapa'>
+      {/* Tu mapa y horarios continúan igual... */}
+        <section className='mapa'>
 
         <div className='mapa-contenedor'>
 
@@ -163,17 +83,14 @@ export const Contenedores = () => {
 
         </div>
     </section>
-    {modalAbierto && (
+      {modalAbierto && (
         <Modal 
-            tipo={modalAbierto}
-            cerrar={() => setModalAbierto(null)} />
-    )}
-        </>
-
-    
-    
+          tipo={modalAbierto} 
+          cerrar={() => setModalAbierto(null)} 
+        />
+      )}
+    </>
   );
-  
 };
 
 export default Contenedores;
