@@ -1,0 +1,46 @@
+.footer-pagina {
+    width: 100%;
+    background-color: #304342;
+    color: #E7E9E3;
+    padding: 25px 0;
+    margin-top: 60px;
+}
+
+.footer-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.footer-contenido p {
+    margin: 0;
+    font-size: 14px;
+    color: #A0B2B1;
+}
+
+.btn-acceso-admin {
+    background: none;
+    border: none;
+    color: #A0B2B1;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.btn-acceso-admin:hover {
+    color: #2457F5;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .footer-contenido {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}

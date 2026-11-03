@@ -79,10 +79,9 @@ export const Contenedores = () => {
                 <p className='info'>Domingo</p>
                 <span className='horarios'>Cerrado</span>
             </div>
-
-
         </div>
     </section>
+    
       {modalAbierto && (
         <Modal 
           tipo={modalAbierto} 

@@ -1,0 +1,213 @@
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f6f8;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Sidebar */
+.admin-sidebar {
+    width: 250px;
+    background-color: #304342;
+    color: white;
+    padding: 30px 20px;
+}
+
+.admin-sidebar h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.admin-rol {
+    font-size: 13px;
+    color: #a0b2b1;
+    margin-bottom: 30px;
+}
+
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    color: #c2d1d0;
+    text-align: left;
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.nav-item.active, .nav-item:hover {
+    background-color: #2457F5;
+    color: white;
+}
+
+/* Contenido Principal */
+.admin-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.admin-header h1 {
+    margin: 0;
+    color: #304342;
+    font-size: 26px;
+}
+
+.admin-header p {
+    margin: 5px 0 0;
+    color: #7C8785;
+}
+
+.btn-nuevo {
+    background-color: #2457F5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Tabs */
+.tabs-categorias {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background-color: #E7E9E3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #304342;
+    font-weight: 500;
+}
+
+.tab-btn.active {
+    background-color: #304342;
+    color: white;
+}
+
+/* Tabla */
+.tabla-contenedor {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.tabla-servicios {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-servicios th, .tabla-servicios td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #E7E9E3;
+}
+
+.tabla-servicios th {
+    background-color: #f9fafb;
+    color: #7C8785;
+    font-weight: 600;
+}
+
+.col-nombre {
+    font-weight: bold;
+    color: #304342;
+}
+
+.col-precio {
+    color: #2457F5;
+    font-weight: bold;
+}
+
+.col-acciones {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-accion {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.btn-accion.edit {
+    background-color: #E8F0FF;
+    color: #2457F5;
+}
+
+.btn-accion.delete {
+    background-color: #FFE8E8;
+    color: #D32F2F;
+}
+
+/* Modal Formulario */
+.modal-admin {
+    background: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #304342;
+    font-weight: 600;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border: 1px solid #E7E9E3;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.modal-admin-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-cancelar {
+    background: none;
+    border: 1px solid #E7E9E3;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background-color: #2457F5;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
