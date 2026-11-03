@@ -21,21 +21,21 @@ export const Contenedores = () => {
         <div className='contenedor'>
 
             <p className='titulo'>Salud y prevención</p>
-            <p className='info'>Invertir en prevención es la desición <br/>
+            <p className='info'>Invertir en prevención es la decisión| <br/>
                 más inteligente para tu sonrisa a largo plazo
             </p>
 
             <div className='fila-servicio'>
-                <p className='servicios'>Chequeo integral</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Limpieza dental</p>
+                <span className='precios'> $600</span>
             </div>
             <div className='fila-servicio'>
-                <p className='servicios'>Profilaxis</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Guarda oclusal</p>
+                <span className='precios'> $600</span>
             </div>
             <div className='fila-servicio'>
-                <p className='servicios'>Protección infantil</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Tratamiento periodontal</p>
+                <span className='precios'> $1500</span>
             </div>
             <div className='botones'>
 
@@ -48,21 +48,21 @@ export const Contenedores = () => {
         </div>
  
         <div className='contenedor'>
-            <p className='titulo'>Estética y diseño</p>
+            <p className='titulo'>Estética y Sonrisa</p>
             <p className='info'>Transformamos tu sonrisa con tratamientos que <br/>
                 realzan tu belleza natural y confianza
             </p>
             <div className='fila-servicio'>
-                <p className='servicios'>Sonrisa radiante</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Resinas</p>
+                <span className='precios'> $1000</span>
             </div>
             <div className='fila-servicio'>
-                <p className='servicios'>Diseño express</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Blanqueamiento</p>
+                <span className='precios'> $2500</span>
             </div>
             <div className='fila-servicio'>
-                <p className='servicios'>Microcarillas de resina</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Carillas de resina</p>
+                <span className='precios'> $1000 - $2000</span>
             </div>
 
             <div className='botones'>
@@ -74,22 +74,34 @@ export const Contenedores = () => {
         </div>
  
         <div className='contenedor'>
-            <p className='titulo'>Corrección y restauración</p>
+            <p className='titulo'>Restauración y Especialidades</p>
             <p className='info'>Devolvemos funcionalidad y armonía a tu mordida <br/>
                 con tratamientos de presición
             </p>
 
             <div className='fila-servicio'>
-                <p className='servicios'>Ortodoncia</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Extracción</p>
+                <span className='precios'> $800 - $2500</span>
             </div>
             <div className='fila-servicio'>
-                <p className='servicios'>Restauración</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Endodoncia</p>
+                <span className='precios'> 3500$</span>
             </div>
             <div className='fila-servicio'>
-                <p className='servicios'>Encías sanas</p>
-                <span className='precios'> --$</span>
+                <p className='servicios'>Protesis removible</p>
+                <span className='precios'> 3000$</span>
+            </div>
+            <div className='fila-servicio'>
+                <p className='servicios'>Protesis fija</p>
+                <span className='precios'> 4500$</span>
+            </div>
+            <div className='fila-servicio'>
+                <p className='servicios'>Brackets (ortodoncia)</p>
+                <span className='precios'> 5000$</span>
+            </div>
+            <div className='fila-servicio'>
+                <p className='servicios'>Implantes</p>
+                <span className='precios'> 25000$</span>
             </div>
 
             <div className='botones'>

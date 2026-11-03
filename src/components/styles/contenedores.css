@@ -3,6 +3,7 @@
 .contenedores {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     text-align: left;
     gap: 30px;
 
@@ -13,11 +14,15 @@
 
 .contenedor {
     width: 400px;
-    height: 400px;
+    min-height: 440px;
+    height: auto;
     box-sizing: border-box;
     padding: 20px;
     background-color: #ebede7  ;
     border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .titulo {
@@ -63,6 +68,8 @@
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: auto; 
+    padding-top: 20px;
 }
 
  /* diseño del mapa */
