@@ -8,18 +8,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     z-index: 9999;
 }
-
 
 .modal {
     width: 780px;
     max-width: 90%;
+    max-height: 90vh; /* Permite scroll si hay muchos elementos */
     background-color: #F7F8F4;
     border-radius: 30px;
     overflow: hidden;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .modal-header {
@@ -41,7 +42,7 @@
     overflow: hidden;
 }
 
-.modal-icono img{
+.modal-icono img {
     width: 100%;
     height: 100%;
 }
@@ -62,7 +63,6 @@
     font-size: 16px;
 }
 
-
 .modal-cerrar {
     background: none;
     border: none;
@@ -71,9 +71,11 @@
     cursor: pointer;
 }
 
-
+/* Scroll interno para la lista de servicios */
 .paquetes {
     padding: 30px 35px;
+    overflow-y: auto; /* Permite hacer scroll solo en la lista si hay muchos ítems */
+    max-height: 60vh;
 }
 
 .paquete {
@@ -83,8 +85,10 @@
     border-radius: 20px;
     padding: 20px 24px;
     margin-bottom: 18px;
+    border: 2px solid transparent; /* Evita que la tarjeta salte al hacer hover/select */
+    box-sizing: border-box;
+    transition: all 0.2s ease;
 }
-
 
 .check {
     width: 32px;
@@ -115,7 +119,6 @@
     font-size: 16px;
 }
 
-
 .precio {
     color: #304342;
     font-size: 24px;
@@ -123,12 +126,11 @@
     margin-left: 20px;
 }
 
-
 .modal-footer {
     border-top: 1px solid #E7E9E3;
     padding: 25px 35px 30px;
+    background-color: #F7F8F4;
 }
-
 
 .boton-cita {
     width: 100%;
@@ -146,7 +148,6 @@
     background-color: #1D49D0;
 }
 
-
 .modal-footer p {
     text-align: center;
     margin: 18px 0 0;
@@ -154,14 +155,20 @@
     font-size: 16px;
 }
 
+/* Interacción Hover y Selección */
+.paquete:hover {
+    border: 2px solid #2457F5;
+}
 
-/*  responsividad  */
+.paquete-seleccionado {
+    border: 2px solid #2457F5 !important;
+    background-color: #DCE8FF !important;
+}
+
+/* Responsividad */
 @media (max-width: 768px) {
-
     .modal {
         width: 95%;
-        max-height: 90vh;
-        overflow-y: auto;
     }
 
     .modal-header {

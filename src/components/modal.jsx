@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react'; 
 import './styles/modal.css';
 import logo from './images/logo_sin_fondo.png';
 import { serviciosData } from './data/serviciosData.js'; 
+import { SeleccionarTratamientos } from './SeleccionarTratamientos.jsx';
 
 const Modal = ({ tipo, cerrar }) => {
+  // Estado para alternar la vista
+  const [modoSeleccion, setModoSeleccion] = useState(false);
+
   const contenido = serviciosData[tipo];
 
   if (!contenido) return null;
+
+  // Si se presiona el botón se muestra el componente
+  //para eso hice lo del data
+  
+  if (modoSeleccion) {
+    return (
+      <SeleccionarTratamientos
+        serviciosDisponibles={contenido.servicios}
+        categoriaTitulo={contenido.titulo}
+        cerrar={cerrar}
+      />
+    );
+  }
 
   return (
     <div className="modal-fondo">
@@ -36,14 +53,20 @@ const Modal = ({ tipo, cerrar }) => {
                 <p>{servicio.descripcion}</p>
               </div>
 
-              {/* El precio ahora viene directamente de la fuente de datos */}
               <span className="precio">{servicio.precio}</span>
             </div>
           ))}
         </div>
 
         <div className="modal-footer">
-          <button className="boton-cita">Agendar cita ahora</button>
+          {/* Al hacer clic aqui, cambia el estado a true y deja seleccionar cosas */}
+          <button 
+            className="boton-cita" 
+            onClick={() => setModoSeleccion(true)}
+          >
+            Agendar cita ahora
+          </button>
+          
           <p>O llama al <u>+52 618 --- ----</u></p>
         </div>
       </div>
