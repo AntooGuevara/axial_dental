@@ -2,11 +2,14 @@ import React from 'react';
 import './styles/navbar.css';
 import logo from './images/logo_sin_fondo.png';
 
-
-const NavBar = () => {
+const NavBar = ({ alAbrirAdmin }) => {
     return (
         <header className="header">
-            <div className="logo-container">
+            <div 
+                className="logo-container" 
+                onClick={alAbrirAdmin}
+                style={{ cursor: 'pointer' }}
+            >
                 <img src={logo} alt="logo" />
             </div>
 

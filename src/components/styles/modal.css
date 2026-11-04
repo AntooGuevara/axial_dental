@@ -165,6 +165,111 @@
     background-color: #DCE8FF !important;
 }
 
+.form-select {
+    padding: 14px;
+    border: 1px solid #E7E9E3;
+    border-radius: 12px;
+    font-size: 15px;
+    outline: none;
+    background-color: #ffffff;
+    color: #304342;
+    cursor: pointer;
+}
+
+.form-select:focus {
+    border-color: #2457F5;
+}
+
+/* Resumen de tratamientos seleccionados */
+.resumen-seleccion {
+    background-color: #E8F0FF;
+    border: 1px solid #DCE8FF;
+    padding: 14px 20px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+    color: #304342;
+    font-size: 15px;
+    text-align: left;
+}
+
+.resumen-seleccion p {
+    margin: 0;
+}
+
+.resumen-seleccion strong {
+    color: #2457F5;
+}
+
+/* Contenedor del Formulario */
+.form-paciente {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: left;
+}
+
+/* Filas agrupadas (Flexbox de 2 columnas) */
+.form-flex {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.form-flex .form-grupo {
+    flex: 1;
+}
+
+/* Grupos de Input individual */
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-grupo label {
+    font-size: 14px;
+    color: #304342;
+    font-weight: 600;
+}
+
+/* Estilo unificado para Inputs, Selects y Fechas */
+.form-grupo input,
+.form-select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #E7E9E3;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #304342;
+    background-color: #FFFFFF;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.form-grupo input::placeholder {
+    color: #A0B2B1;
+}
+
+/* Enfoque azul suave al hacer clic en un input */
+.form-grupo input:focus,
+.form-select:focus {
+    border-color: #2457F5;
+    box-shadow: 0 0 0 3px rgba(36, 87, 245, 0.12);
+}
+
+/* Ajustes adicionales para responsividad */
+@media (max-width: 600px) {
+    .form-flex {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
 /* Responsividad */
 @media (max-width: 768px) {
     .modal {

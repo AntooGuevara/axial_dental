@@ -1,26 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
 
-// componentes necesarios
 import NavBar from './components/NavBar.jsx';
 import Informacion from './components/informacion.jsx';
 import Fondo from './components/fondo.jsx';
 import Contenedores from './components/contenedores.jsx';
 import Footer from './components/footer.jsx';
-import AdminServicios from './components/adminservicios.jsx'; // Importamos el Admin
+import AdminServicios from './components/adminservicios.jsx';
 
 function App() {
-  
   const [vistaActual, setVistaActual] = useState('cliente');
 
   return (
     <div className="App">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
       {vistaActual === 'admin' ? (
-        
         <div>
-          
           <button 
             onClick={() => setVistaActual('cliente')}
             style={{
@@ -43,10 +37,10 @@ function App() {
           <AdminServicios />
         </div>
       ) : (
-        
         <>
           <Fondo />
-          <NavBar />
+          {/* Le pasamos la prop al NavBar para que detecte el clic en el logo */}
+          <NavBar alAbrirAdmin={() => setVistaActual('admin')} />
           <Contenedores />
           <Informacion />
           <Footer alAbrirAdmin={() => setVistaActual('admin')} />
