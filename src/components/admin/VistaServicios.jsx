@@ -15,7 +15,7 @@ const VistaServicios = () => {
       <div className="grid-servicios-cards">
         {Object.values(serviciosData).flatMap(cat => cat.servicios).map((serv, i) => (
           <div className="card-servicio-item" key={i}>
-            <div className="icon-blue">⚡</div>
+            <div className="icon-blue">lll</div>
             <h4>{serv.nombre}</h4>
             <p>{serv.descripcion}</p>
             <div className="precio-row">

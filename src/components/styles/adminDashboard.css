@@ -213,3 +213,157 @@
 
 /* Archivos Dropzone */
 .dropzone-box { border: 2px dashed #cbd5e1; background: #f8fafc; border-radius: 16px; padding: 60px 40px; text-align: center; color: var(--text-secondary); }
+
+
+
+
+.modal-admin-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(15, 23, 42, 0.4); /* Fondo oscurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.modal-admin-content {
+  background-color: #f8fafc;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 20px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header del Modal */
+.modal-admin-header {
+  display: flex;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: #f8fafc;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.modal-admin-logo {
+  width: 60px;
+  height: 60px;
+  background-color: var(--blue-primary);
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.modal-admin-logo img {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+}
+
+.modal-admin-title h2 {
+  margin: 0 0 6px 0;
+  font-size: 22px;
+  color: var(--text-primary);
+}
+
+.modal-admin-title p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.modal-admin-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-admin-close:hover {
+  color: var(--text-primary);
+}
+
+/* Formulario interior */
+.modal-admin-form {
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #f4f6f9;
+}
+
+.form-flex-admin {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.form-group-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.form-group-admin label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group-admin input,
+.form-group-admin select {
+  padding: 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  background-color: white;
+  color: var(--text-primary);
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.form-group-admin input:focus,
+.form-group-admin select:focus {
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px var(--blue-light);
+}
+
+/* Footer y Botón Confirmar */
+.modal-admin-footer {
+  margin-top: 10px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-confirmar-registro {
+  width: 100%;
+  background-color: var(--blue-primary);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-confirmar-registro:hover {
+  background-color: var(--blue-hover);
+}

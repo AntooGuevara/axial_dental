@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './styles/adminDashboard.css';
 import logo from './images/logo_sin_fondo.png';
+import ModalNuevoPaciente from './admin/ModalNuevoPaciente.jsx';
 
 // Importamos los submódulos
 import VistaInicio from './admin/VistaInicio.jsx';
@@ -10,9 +11,10 @@ import VistaServicios from './admin/VistaServicios.jsx';
 import VistaConfiguracion from './admin/VistaConfiguracion.jsx';
 import VistaExpediente from './admin/VistaExpediente.jsx';
 
-export const AdminDashboard = ({ alVolverSitio }) => {
+export const AdminDashboard = ({ alVolverSitio }) => {  
   const [seccionActiva, setSeccionActiva] = useState('inicio');
   const [pacienteSeleccionado, setPacienteSeleccionado] = useState(null);
+  const [mostrarModalPaciente, setMostrarModalPaciente] = useState(false);
 
   const handleAbrirExpediente = (nombre, id) => {
     setPacienteSeleccionado({ nombre, id });
@@ -85,7 +87,9 @@ export const AdminDashboard = ({ alVolverSitio }) => {
           </div>
           <div className="topbar-acciones">
             <button className="btn-notificacion">🔔</button>
-            <button className="btn-nuevo-paciente">+ Nuevo paciente</button>
+            <button className="btn-nuevo-paciente" onClick={() => setMostrarModalPaciente(true)}>
+              + Nuevo paciente
+            </button>
           </div>
         </header>
 
@@ -96,11 +100,18 @@ export const AdminDashboard = ({ alVolverSitio }) => {
           {seccionActiva === 'pacientes' && <VistaPacientes onAbrir={handleAbrirExpediente} />}
           {seccionActiva === 'servicios' && <VistaServicios />}
           {seccionActiva === 'configuracion' && <VistaConfiguracion />}
+          
+          {/* Se corrigió el cierre del paréntesis de VistaExpediente */}
           {seccionActiva === 'expediente' && (
             <VistaExpediente paciente={pacienteSeleccionado} onVolver={() => setSeccionActiva('pacientes')} />
           )}
         </div>
       </main>
+
+      {/* RENDERIZADO DEL MODAL: Se movió fuera del <main> */}
+      {mostrarModalPaciente && (
+        <ModalNuevoPaciente onClose={() => setMostrarModalPaciente(false)} />
+      )}
     </div>
   );
 };
