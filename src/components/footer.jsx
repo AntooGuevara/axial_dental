@@ -6,10 +6,7 @@ export const Footer = ({ alAbrirAdmin }) => {
     <footer className="footer-pagina">
       <div className="footer-contenido">
         <p>© 2026 Axial Dental. Todos los derechos reservados.</p>
-
-        <button className="btn-acceso-admin" onClick={alAbrirAdmin}>
-          Acceso Administrador
-        </button>
+      
       </div>
     </footer>
   );
